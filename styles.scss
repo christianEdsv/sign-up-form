@@ -1,13 +1,19 @@
 $primary-red: hsl(0, 100%, 74%);
 $primary-green: hsl(154, 59%, 51%);
+$green-op: rgba(56, 204, 140, 0.9);
 $accent-blue: hsl(248, 32%, 49%);
 $neutral-dblue: hsl(249, 10%, 26%);
 $neutral-gblue: hsl(246, 25%, 77%);
 $white: white;
-$black: black;
+$gray: #cccc;
+$gray-letter: #a5a5a5;
 
 @mixin border-radius{
     border-radius: 8px;
+}
+
+@mixin font{
+    font-family: 'Poppins', sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -19,47 +25,86 @@ body{
     background-color: $primary-red;
     background-image: url(images/desktop.png);
     background-repeat: repeat;
-    font-family: 'Poppins', sans-serif;
+    @include font();
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
 }
 .container{
+    margin: 0 auto;
+    width: 80%;
     display: flex;
-    align-items: center;
     flex-direction: row;
     height: 100%;
 }
 .description{
-    background-color: red;
-    padding: 40px;
+    padding: 20px;
+    width: 50%;
     color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .action{
-    padding: 40px;
-    background-color: red;
-    width: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 button{
     background-color: $accent-blue;
     color: $white;
-    padding: 10px;
     width: 100%;
+    height: 50px;
     margin-bottom: 20px;
+    border-width: 0;
     @include border-radius();
+    @include font();
+}
+button:hover{
+    background-color: $neutral-dblue;
 }
 .form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $white;
-    padding: 15px;
+    padding-top: 35px;
     @include border-radius();
 }
 .form input{
+    border-style: solid;
+    border-width: 1px;
+    border-color: $gray;
+    margin-bottom: 15px;
     width: 85%;
-    height: 40px;
-    margin: 5px;
+    height: 50px;
     @include border-radius();
+}
+#first-name, #last-name, #email, #password{
+    padding-left: 20px;
+    @include font();
+    font-weight: 700;
+}
+.sunmit{
+    color: $white;
+    background-color: $primary-green;
+    @include font();
+    font-weight: 500;
+    font-size: 1em;
+}
+.sunmit:hover{
+    background-color: $green-op
+}
+label{
+    text-align: center;
+    font-size: 0.7em;
+    color: $gray-letter;
+    margin-bottom: 20px;
+}
+label strong{
+    color: $primary-red;
 }
