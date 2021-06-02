@@ -1,0 +1,65 @@
+$primary-red: hsl(0, 100%, 74%);
+$primary-green: hsl(154, 59%, 51%);
+$accent-blue: hsl(248, 32%, 49%);
+$neutral-dblue: hsl(249, 10%, 26%);
+$neutral-gblue: hsl(246, 25%, 77%);
+$white: white;
+$black: black;
+
+@mixin border-radius{
+    border-radius: 8px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: $primary-red;
+    background-image: url(images/desktop.png);
+    background-repeat: repeat;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+.description{
+    background-color: red;
+    padding: 40px;
+    color: $white;
+}
+.action{
+    padding: 40px;
+    background-color: red;
+    width: 100%;
+}
+button{
+    background-color: $accent-blue;
+    color: $white;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    @include border-radius();
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    padding: 15px;
+    @include border-radius();
+}
+.form input{
+    width: 85%;
+    height: 40px;
+    margin: 5px;
+    @include border-radius();
+}
