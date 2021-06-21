@@ -72,6 +72,7 @@ button{
     @include border-radius();
     @include font();
     font-size: 0.8em;
+    cursor: pointer;
 }
 button:hover{
     background-color: $neutral-dblue;
@@ -96,6 +97,9 @@ button:hover{
     height: 50px;
     @include border-radius();
 }
+.form input:hover{
+    border-color: $primary-red;
+}
 #first-name, #last-name, #email, #password{
     padding-left: 20px;
     @include font();
@@ -108,18 +112,21 @@ button:hover{
     @include font();
     font-weight: 500;
     font-size: 1em;
+    cursor: pointer;
 }
 .sunmit:hover{
     background-color: $green-op
 }
 label{
+    width: 80%;
     text-align: center;
     font-size: 0.7em;
     color: $gray-letter;
     margin-bottom: 20px;
 }
-label strong{
+label a{
     color: $primary-red;
+    text-decoration: none;
 }
 /*Media queries*/
 @media (max-width: 768px) {
