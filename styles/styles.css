@@ -8,7 +8,7 @@
 
 body {
   background-color: #ff7a7a;
-  background-image: url(images/desktop.png);
+  background-image: url(../images/desktop.png);
   background-repeat: repeat;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
@@ -124,13 +124,13 @@ button:hover {
   border-color: #ff7a7a;
 }
 
-#first-name, #last-name, #email, #password {
+#first_name, #last_name, #email, #password {
   padding-left: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
-.sunmit {
+.submit {
   color: white;
   background-color: #38cc8c;
   -webkit-box-shadow: -1px -19px 0px -15px rgba(24, 133, 43, 0.47) inset;
@@ -141,7 +141,7 @@ button:hover {
   cursor: pointer;
 }
 
-.sunmit:hover {
+.submit:hover {
   background-color: rgba(56, 204, 140, 0.9);
 }
 
@@ -172,12 +172,15 @@ label a {
   label {
     font-size: 0.6em;
   }
-  .sunmit {
+  .submit {
     font-size: 0.8em;
   }
 }
 
 @media (max-width: 540px) {
+  body {
+    background-image: url(../images/mobile.png);
+  }
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

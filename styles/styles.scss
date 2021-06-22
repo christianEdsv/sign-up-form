@@ -27,7 +27,7 @@ $shadow: 1px 7px 0px 0px rgba(0,0,0,0.12);
 }
 body{
     background-color: $primary-red;
-    background-image: url(images/desktop.png);
+    background-image: url(../images/desktop.png);
     background-repeat: repeat;
     @include font();
     min-height: 100vh;
@@ -100,12 +100,12 @@ button:hover{
 .form input:hover{
     border-color: $primary-red;
 }
-#first-name, #last-name, #email, #password{
+#first_name, #last_name, #email, #password{
     padding-left: 20px;
     @include font();
     font-weight: 700;
 }
-.sunmit{
+.submit{
     color: $white;
     background-color: $primary-green;
     box-shadow: -1px -19px 0px -15px rgba(24,133,43,0.47) inset;
@@ -114,7 +114,7 @@ button:hover{
     font-size: 1em;
     cursor: pointer;
 }
-.sunmit:hover{
+.submit:hover{
     background-color: $green-op
 }
 label{
@@ -142,12 +142,15 @@ label a{
     label{
         font-size: 0.6em; 
     }
-    .sunmit{
+    .submit{
         font-size: 0.8em;
     }
 }
 
 @media (max-width: 540px) {
+    body{
+        background-image: url(../images/mobile.png);
+    }
     .container{
         flex-direction: column;
         padding: 20px;

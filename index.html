@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div class="container">
@@ -18,15 +19,16 @@
         </div>
         <div class="action">
             <button><strong>Try free 7 days</strong> then $20/mo. thereafter</button>
-            <form class="form" action="post">
-                <input type="text" name="first-name" id="first-name" placeholder="First name">
-                <input type="text" name="last-name" id="last-name" placeholder="Last name">
-                <input type="email" name="email" id="email" placeholder="Email Address">
-                <input type="password" name="password" id="password" placeholder="Password">
-                <input type="submit" value="CLAIM YOUR FREE TRIAL"  id="sunmit" class="sunmit">
+            <form class="form" id="form">
+                <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+                <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <input type="password" name="password" id="password" placeholder="Password" maxlength="20" required>
+                <input type="submit" value="CLAIM YOUR FREE TRIAL"  id="submit" class="submit">
                 <label>By clicking the button, you are agreeing to our <strong><a href="/">Terms and Services</a></strong></label>
             </form>
         </div>
     </div>
+    <script src="js/form.js"></script>
 </body>
 </html>
